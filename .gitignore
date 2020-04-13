@@ -1,4 +1,4 @@
-./data/*
-./logs/*
-./src/__pycache__
-./sftp-config.json
+data/*
+logs/*
+src/__pycache__
+sftp-config.json
