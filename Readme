@@ -1,0 +1,60 @@
+smart-compose 
+
+
+* Used huggingface transformers GPT2 pre-trained language model
+* Model is defined in model.py
+* parameters for the fine-tuneing model has been set in confg.py
+* create logs and data directories
+* To tring model set all the parameters in config.py and run python train.py
+* Inference can be don using restAPI. to start the server python app.py
+
+http://0.0.0.0:6001/textgen Request type POST
+
+input : 
+
+{
+  "text":"can I"
+}
+
+outut :
+
+{
+    "generated_text": [
+        " track this card transaction?!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    ],
+    "original_text": "Can I"
+}
+
+project directory strcture
+
+
+├── data
+│   ├── banking_data
+│   │   ├── categories.json
+│   │   ├── test.csv
+│   │   └── train.csv
+│   ├── enron_05_17_2015_with_labels_v2.csv
+│   └── wikitext-2-raw
+│       ├── wiki.test.raw
+│       ├── wiki.train.raw
+│       └── wiki.valid.raw
+├── Dockerfile
+├── logs
+│   └── app.log
+├── Readme
+├── requirements.txt
+├── sftp-config.json
+├── src
+│   ├── app.py
+│   ├── config.py
+│   ├── dataset.py
+│   ├── generator.py
+│   ├── model.py
+│   ├── __pycache__
+│   │   ├── config.cpython-37.pyc
+│   │   ├── dataset.cpython-37.pyc
+│   │   ├── generator.cpython-37.pyc
+│   │   └── model.cpython-37.pyc
+│   └── train.py
+└── utils
+    └── bank_data.py
